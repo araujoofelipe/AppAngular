@@ -1,0 +1,15 @@
+
+<h2>{{title}}</h2>
+<hr>
+<section id="form">
+  <form (ngSubmit)="onSubmit()" #redfForm="ngForm">
+    <div class="form-group">
+      <label>Descrição</label>
+      <textarea [(ngModel)]="task.description" class="form-control" name="description"   rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+    <button type="button" class="btn btn-secondary" [routerLink]="['/']">Cancelar</button>
+
+  </form>
+
+</section>

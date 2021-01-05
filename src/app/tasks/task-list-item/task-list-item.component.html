@@ -1,0 +1,15 @@
+<div class="form-group form-check">
+  <input type="checkbox" class="form-check-input">
+  <div class="task-item-description" [innerHTML]="task.description"
+    [ngClass]=" task.completed ? 'task-completed'  : '' ">
+  </div>
+  <div>
+    <button type="button" [routerLink]="['/edit',task.id]" class="btn btn-primary mr-1">
+      Alterar
+    </button>
+    <button type="button" (click)="remove(task)" class="btn btn-danger mr-1">
+      Excluir
+    </button>
+  </div>
+
+</div>
